@@ -53,19 +53,31 @@ This action we took ensure that file be accessible online. The next action invol
 - In the field of Amazon Resource Name (ARN), type the ARN of your bucket and add by "/*" after the ARN. e.g arn:aws:s3:::first-s3-bucket-024/*
 - Click on "Add statement" then click on generate policy
   
-![lab02pics14](images/lab02pics14.png)
+![lab02pics13](images/lab02pics13.png)
 - Copy the policy, navigate to the bucket policy tab and paste
   
 ![lab02pics14](images/lab02pics14.png)
 - Click on save changes
-- We can view the different version of the file
+- We can now view the different version of the file
   
-Old version
+**Old version**
 ![lab02pics15](https://github.com/user-attachments/assets/e97525a4-fb2f-457d-8b87-60c7668d5ee6)
 ![image](https://github.com/user-attachments/assets/c6e5f503-4052-4038-97a1-db3b3c8c3f3e)
 
-New version
+**New version**
 ![lab02pics16](https://github.com/user-attachments/assets/e2187760-5fb3-4cde-b2d6-a20380de4cfb)
 ![image](https://github.com/user-attachments/assets/6ea98c90-e02e-40bf-bbbe-3b2e5ac670b6)
 
+## Step 4
+### Creating life cycle policy
+We will setup rule to automatically move files from one type of storage to another in your Amazon S3 bucket. Specifically, it moves files to a storage type called Standard-A after they've been sitting in your bucket for 30 days. This helps you save money because Standard-IA storage is cheaper than the default storage option. So, if you have files that you don't access very often but still want to keep, this rule helps you save costs by storing them in a cheaper storage class after a certain period of time.
 
+- Navigate to the management tab of the bucket and click create lifecycle rule
+  ![lab02pics17](images/lab02pics17.png)
+- Set the specification and click create rule
+  ![lab02pics18](images/lab02pics18.png)
+  ![image](https://github.com/user-attachments/assets/b8c1a0b4-9e78-4c9d-9406-873d137b85fa)
+
+- lifecycle policy is created successfully
+
+  
