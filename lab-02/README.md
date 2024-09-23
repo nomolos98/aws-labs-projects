@@ -35,13 +35,30 @@ By default the bucket versioning is disabled
 - Now we modify the content of the file and upload it again. A new version is show below by enabling show versions
   ![lab02pics9](images/lab02pics9.png)
   ![lab02pics10](images/lab02pics10.png)
-- 
+  
+## Step 3
+### Content view and permissions setting
+In the permissions tab of the bucket, you would observe that block all public access is enabled
+![lab02pics11](images/lab02pics11.png)
+- Click on Edit button and uncheck the "Block all public access" option, Save changes and confirm
+- ![lab02pics12](images/lab02pics12.png)
 
+This action we took ensure that file be accessible online. The next action involves creating bucket policy to specify action the public would have/perform on the file. 
+- Click on the Edit button and click on policy generator
+- Select the "Type of Policy" as "S3 Bucket Policy"
+- Set the "Effect" to "Allow", specify the "Principal" as "*", which means all users.
+- Choose the action "Get object" and "Get object version"
+- In the field of Amazon Resource Name (ARN), type the ARN of your bucket and add by "/*" after the ARN. e.g arn:aws:s3:::first-s3-bucket-024/*
+- Click on "Add statement" then click on generate policy
+![lab02pics14](images/lab02pics14.png)
+- Copy the policy, navigate to the bucket policy tab and paste
+![lab02pics14](images/lab02pics14.png)
+- Click on save changes
+We can view the different version of the file
+![lab02pics15](https://github.com/user-attachments/assets/e97525a4-fb2f-457d-8b87-60c7668d5ee6)
+![image](https://github.com/user-attachments/assets/c6e5f503-4052-4038-97a1-db3b3c8c3f3e)
 
-![lab-001-scrn-02](images/lab-001-scrn-02.png)
-
-Select *Amazon Linux 2 AMI*. An AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch your instance. In this first lab, we will stick to the x86 architecture.
-
-![lab-001-scrn-03](images/lab-001-scrn-03.png)
+![lab02pics16](https://github.com/user-attachments/assets/e2187760-5fb3-4cde-b2d6-a20380de4cfb)
+![image](https://github.com/user-attachments/assets/6ea98c90-e02e-40bf-bbbe-3b2e5ac670b6)
 
 
