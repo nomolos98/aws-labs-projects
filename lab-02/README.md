@@ -17,7 +17,15 @@ The create bucket page will appear, provide a unique name for the bucket. Ensure
 
 ![lab02pics3](images/lab02pics3.png)
 
-### 
+### Upload an object into this bucket
+We will create a sample text file to contain "Welcome to uploading file to bucket" and upload to the bucket
+- click the Upload button, add the file and click on upload
+  ![lab02pics4](images/lab02pics4.png)
+- The screenshot below shows the file was uploaded successfully
+   ![lab02pics5](images/lab02pics5.png)
+- 
+
+
 ![lab-001-scrn-02](images/lab-001-scrn-02.png)
 
 Select *Amazon Linux 2 AMI*. An AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch your instance. In this first lab, we will stick to the x86 architecture.
