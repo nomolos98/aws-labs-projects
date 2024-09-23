@@ -73,9 +73,12 @@ This action we took ensure that file be accessible online. The next action invol
 We will setup rule to automatically move files from one type of storage to another in your Amazon S3 bucket. Specifically, it moves files to a storage type called Standard-A after they've been sitting in your bucket for 30 days. This helps you save money because Standard-IA storage is cheaper than the default storage option. So, if you have files that you don't access very often but still want to keep, this rule helps you save costs by storing them in a cheaper storage class after a certain period of time.
 
 - Navigate to the management tab of the bucket and click create lifecycle rule
+  
   ![lab02pics17](images/lab02pics17.png)
 - Set the specification and click create rule
+  
   ![lab02pics18](images/lab02pics18.png)
+  
   ![image](https://github.com/user-attachments/assets/b8c1a0b4-9e78-4c9d-9406-873d137b85fa)
 
 - lifecycle policy is created successfully
