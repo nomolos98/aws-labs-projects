@@ -36,5 +36,21 @@ We are creating a second subnet (private subnet), so repeat same steps and speci
 - Click create subnet button
   
   ![lab03pics7](images/lab03pics7.png)
-  
+
+We no whave the 2 completed subnets
+
+![lab03pics8](images/lab03pics8.png)
+
+## Step 3
+### Creating Internet Gateways attached to VPC
+- Navigate to Internet gateways on the left sidebar and click
+- Next, click "Create Internet gateway" button
+![lab03pics9](images/lab03pics9.png)
+
+- Provide name for the internet gateway
+- Click internet gateway button
+![lab03pics10](images/lab03pics10.png)
+
+- The internet gateway is successfully created, and it is currently detached(meaning not attached to a vpc and so there can't be any internet connectivity)
+  ![lab03pics11](images/lab03pics11.png)
 
