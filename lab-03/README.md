@@ -24,15 +24,17 @@ The VPC created is as shown below
 - The subnet page appears, click on create subnet
 - 
 ![lab03pics4](images/lab03pics4.png)
+
 - On the create subnet page (public subnet), select ID of the VPC we created earlier
 - Enter the subnet name, choose available zone, and specify the IPv4 CIDR for the subnet
 - Click Add new subnet button
   ![lab03pics5](images/lab03pics5.png)
-  ![lab03pics5](images/lab03pics5.png)
+  ![lab03pics6](images/lab03pics6.png)
 
 We are creating a second subnet (private subnet), so repeat same steps and specify the following
 - The subnet name, choose availability zone and provide IPv4 CIDR (e.g 10.0.7.0/24)
 - Click create subnet button
+  
   ![lab03pics7](images/lab03pics7.png)
   
 
