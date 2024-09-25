@@ -54,3 +54,28 @@ We no whave the 2 completed subnets
 - The internet gateway is successfully created, and it is currently detached(meaning not attached to a vpc and so there can't be any internet connectivity)
   ![lab03pics11](images/lab03pics11.png)
 
+- Attach the internet gateway to the VPC
+![lab03pics12](images/lab03pics12.png)
+![lab03pics13](images/lab03pics13.png)
+
+The internet gateway is now attached
+![lab03pics15](images/lab03pics15.png)
+
+Next we will be setting up Routing tables for internet coonectivity with the internet gateway.
+![lab03pics14](images/lab03pics14.png)
+-
+## Step 4
+### Creating Route table for connectivity
+- Navigate to The Route table on the left sidebar and click
+- Next, click "Create Route table" button
+![lab03pics16](images/lab03pics16.png)
+- Enter name of the route table and select the VPC
+- Click on Create route table button
+![lab03pics17](images/lab03pics17.png)
+
+- Select Subnet association tab and click on Edit subnet associations
+![lab03pics18](images/lab03pics18.png)
+- Select the pulic subnet and click on save association
+![lab03pics19](images/lab03pics19.png)
+
+
