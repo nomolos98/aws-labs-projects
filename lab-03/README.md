@@ -9,7 +9,7 @@ Goto [AWS Console](https://console.aws.amazon.com/) and login with your credenti
 
 ![lab03pics1](images/lab03pics1.png)
 
-### Create PVC
+### Create VPC
 Another page will appear, click "Create VPC"
 - Select VPC only option, specify CIDR block
 - Click Create VPC button
@@ -150,5 +150,33 @@ The subnet have been successfully attached to the route table
 
 **NAT Gateway:** Imagine it as a one-way street sign for your subnet's traffic. When you attach a NAT Gateway to a subnet, it lets the resources in that subnet (like EC2 instances) access the internet, but it doesn't allow incoming traffic from the internet to reach those resources, it's like the resources can go out to the internet, but the internet traffic can't directly come in
 
+![image](https://github.com/user-attachments/assets/31e835b4-3c61-4d01-838a-84d4b2cc5375)
 
+## Step 6
+### VPC Peering
+VPC peeering establishes network connection between  VPCs, allowing EC2 instances in one VPC to communicate with EC2 instances in the other VPC.
+- Create two VPCs(let use same region)
+- Navigate to Peering connections option on the left sidebar and click 
+- Next, click "Create Peering connection" button and provide details
+- Provide name for the VPC peering connection
+- Select the requeser VPC
+- Ensure you select same region since VPCs were created in same region
+- select the acceptor VPC
+- Click on create peering connection button
+- In the Peering connection page, select Actions option on the far right side and click Accept request
+- Click the Accept request button when done
+- Select the acceptor VPC option on route table
+- Select the Route table and navigate to Route tab
+- Click on Edit routes, and click the add route button
+- Goto the VPC page and select the requester VPC
+- In the Details tab, check the IPv4 CIDR address( in this case 192.168.0.0/16) and select it and paste in the Destination field when adding Routes
+- In the Target choose VPC peering and then choose the peering you earlier created
+- Click save changes
 
+- Next, copy the IPv4 CIDR of the acceptor VPC address(in this case 172.16.0.0/16)
+- Select Route table and select the requester VPC and choose the Route Tab
+- Then click Edit route and add route. Paste the CIDR in the Destination field, in target choose VPC peering and select the peering connection created earlier
+
+Connection is sucessfully established, and resources in both the acceptor VPC and requester VPC can connect
+
+In summary for understanding what we just build. Think of a VPC endpoint like a dedicated, secure tunnel between your house (VPC) and a library (AWS service) so instead of going through the bustling streets (public internet), you have a direct pathway from your nome to the library. This pathway ensures that only you and authorized users can access the library's resources, like books or documents, without exposing them to outside risks. It's a private, efficient way to access what you need, keeping your data safe from prying eyes on the Internet. Now, when you're backing up data from an EC2 instance to an S3 bucket, it usually goes over the intemet, whether the instance is in a public or private subnet. But if the data is sensitive, that means it's risiky because hackers could try to get it while it's traveling over the internet, that is VPC endpoint solves, bu cretaing private connections between the VPC and S3 and data doesn't go through the internet
